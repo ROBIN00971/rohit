@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit | Tech Stack</title>
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231a1a2e%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2265%22 font-family=%22Space Grotesk%22 font-weight=%22bold%22 fill=%22%236c63ff%22>R</text></svg>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- NEW: Dedicated stylesheet for this page -->
+    <link rel="stylesheet" href="tech-stack.css">
+</head>
+
+<body>
+    <!-- Canvas for background animation -->
+    <canvas id="star-canvas"></canvas>
+
+    <!-- Custom mouse cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Rohit</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tech-stack.html" class="active">Tech Stack</a></li>
+                <li><a href="games.html">Mini Games</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="tech-discussion">
+            <h2 class="animate-on-scroll">Building This Portfolio</h2>
+            <p class="section-intro animate-on-scroll">
+                This portfolio is a hand-coded project designed to demonstrate my skills in modern web development. It's
+                built from the ground up, focusing on performance, interactivity, and a clean, maintainable code
+                structure. Below is a detailed breakdown of the technologies used and the rationale behind their
+                implementation.
+            </p>
+
+            <div class="tech-list">
+                <!-- HTML5 -->
+                <div class="tech-item animate-on-scroll">
+                    <div class="tech-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M1.018 2.218L3.003 21.78l8.984 2.202 9.03-2.215L22.98 2.218H1.018zM12 19.458l-6.03-1.632.75-8.42h10.548l-.45 5.063-3.818 1.013v.001h-.003l-3.815-1.013-.227-2.542h-2.1l.338 3.793L12 19.458zm5.01-6.916H7.837l-.224-2.5h8.76l-.363 2.5z" />
+                        </svg>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-item-icon">...</span>
+                        <div class="tech-item-content">
+                            <h3>HTML5</h3>
+                            <ul>
+                                <li>Used semantic elements for clear document structure.</li>
+                                <li>Embedded SVG icons directly for performance and scalability.</li>
+                                <li>Ensured all pages have a logical and accessible content flow.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CSS3 -->
+                <div class="tech-item animate-on-scroll">
+                    <div class="tech-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M2.513 2.218L4.498 21.78l7.489 2.202 7.523-2.215L21.485 2.218H2.513zM17.34 7.03l-.263 2.894-4.09 1.12-4.075-1.12-.278-3.09h8.443zm-2.26 6.513l-.003.002-2.09.568-2.08-.568-.14-.55h-2.24l.43 2.86 3.992 1.09h.003l4.01-1.09.57-6.37H9.55l.23 2.5h5.3z" />
+                        </svg>
+                    </div>
+                    <div class="tech-item-content">
+                        <h3>CSS3</h3>
+                        <p>All visual styling is handled with CSS3, organized into modular files (`header.css`,
+                            `games.css`, etc.) for maintainability. Modern CSS features were used to create a responsive
+                            and dynamic user experience.</p>
+                        <ul>
+                            <li><strong>CSS Variables:</strong> Implemented for a consistent color scheme and easy theme
+                                management.</li>
+                            <li><strong>Flexbox & Grid:</strong> Used for creating robust and flexible layouts, like the
+                                project and games grids.</li>
+                            <li><strong>Transitions & Animations:</strong> Powered all hover effects and the
+                                scroll-triggered animations using `@keyframes`.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item animate-on-scroll">
+                    <div class="tech-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 24a12 12 0 0 1-3.23-23.45c.44.08.6.38.6.78l-.02 2.14c-2.6.46-3.14-1.13-3.14-1.13-.4-.98-1-1.25-1-1.25-.8-.55.06-.54.06-.54.88.06 1.35.9, 1.35.9.78 1.35 2.05.96 2.55.73.08-.57.3-.96.56-1.18-1.95-.22-4-1-4-4.34 0-.96.34-1.75.9-2.36-.09-.22-.39-1.12.09-2.32 0 0 .74-.24 2.4.9.7-.2 1.45-.3 2.2-.3.75 0 1.5.1 2.2.3 1.66-1.14 2.4-.9 2.4-.9.48 1.2.18 2.1.09 2.32.56.6.9 1.4.9 2.36 0 3.35-2.05 4.12-4 4.34.3.26.58.78.58 1.57l-.01 2.4c0 .4.16.86.6.7A12 12 0 0 1 12 24z" />
+                        </svg>
+                    </div>
+                    <div class="tech-item-content">
+                        <h3>JavaScript (ES6+)</h3>
+                        <p>Vanilla JavaScript brings the portfolio to life. It handles all client-side logic, from user
+                            interactions to complex animations and API calls, without relying on external libraries like
+                            jQuery.</p>
+                        <ul>
+                            <li><strong>DOM Manipulation:</strong> Used to dynamically add and remove classes for
+                                animations (e.g., coin flip, scroll effects).</li>
+                            <li><strong>Event Listeners:</strong> Captured user actions like `mousemove`, `click`, and
+                                `scroll` to create interactive features.</li>
+                            <li><strong>Modern Syntax (Async/Await):</strong> Implemented for handling the speed test
+                                and Firebase form submission, resulting in cleaner, more readable asynchronous code.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Canvas API -->
+                <div class="tech-item animate-on-scroll">
+                    <div class="tech-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M21.5 2.5a2 2 0 0 0-2-2h-15a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2zM12 12l-8 4.5V7.5zM13 12l8 4.5V7.5z" />
+                        </svg>
+                    </div>
+                    <div class="tech-item-content">
+                        <h3>HTML5 Canvas API</h3>
+                        <p>The interactive starfield background is rendered on an HTML5 `<canvas>` element. A JavaScript
+                                `Star` class manages the state of each star, and the `requestAnimationFrame` loop
+                                efficiently updates their positions to create a smooth animation that reacts to the
+                                user's cursor.</p>
+                        <ul>
+                            <li>Object-oriented approach with a `Star` class for managing particles.</li>
+                            <li>Used `requestAnimationFrame` for performance-optimized animation loops.</li>
+                            <li>Calculated mouse-to-particle distance to create the interactive repulsion effect.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Firebase -->
+                <div class="tech-item animate-on-scroll">
+                    <div class="tech-item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M6.363 3.438L4.223 4.96 12 10.158l7.777-5.198-2.14-1.522L12 6.363zM3 6.363v11.274l9 6 9-6V6.363L12 12z" />
+                        </svg>
+                    </div>
+                    <div class="tech-item-content">
+                        <h3>Firebase Firestore</h3>
+                        <p>The feedback form is powered by Firebase Firestore, a cloud-hosted NoSQL database. This
+                            provides a serverless backend solution to securely receive and store user messages without
+                            needing to manage my own server.</p>
+                        <ul>
+                            <li>Integrated the Firebase V9 SDK (modular) for optimized performance.</li>
+                            <li>Used `async/await` to handle the asynchronous submission process cleanly.</li>
+                            <li>Stored messages in a `feedback` collection with a server-side timestamp for accurate
+                                record-keeping.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rohit Majumder. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

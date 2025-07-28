@@ -1,0 +1,78 @@
+#star-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Custom mouse cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease-out;
+}
+
+.custom-cursor.hover {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(108, 99, 255, 0.2);
+    border-color: var(--accent-color);
+}
+
+/* Initial fade-in for hero content */
+.fade-in {
+    animation: fadeInAnimation 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for grid items */
+.skills-grid .animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+.skills-grid .animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+.skills-grid .animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+.skills-grid .animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }
+.skills-grid .animate-on-scroll:nth-child(5) { transition-delay: 0.5s; }
+.skills-grid .animate-on-scroll:nth-child(6) { transition-delay: 0.6s; }
+.skills-grid .animate-on-scroll:nth-child(7) { transition-delay: 0.7s; }
+.skills-grid .animate-on-scroll:nth-child(8) { transition-delay: 0.8s; }
+.skills-grid .animate-on-scroll:nth-child(9) { transition-delay: 0.9s; }
+
+.project-grid .animate-on-scroll:nth-child(odd) {
+    transform: translateX(-50px);
+}
+.project-grid .animate-on-scroll:nth-child(even) {
+    transform: translateX(50px);
+}
+.project-grid .animate-on-scroll.visible {
+    transform: translateX(0);
+}
+
+.tech-grid .animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+.tech-grid .animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+.tech-grid .animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+.tech-grid .animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }

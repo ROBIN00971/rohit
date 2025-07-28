@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit | Mini Games</title>
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231a1a2e%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2265%22 font-family=%22Space Grotesk%22 font-weight=%22bold%22 fill=%22%236c63ff%22>R</text></svg>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="games.css">
+</head>
+
+<body>
+    <!-- Canvas for background animation -->
+    <canvas id="star-canvas"></canvas>
+
+    <!-- Custom mouse cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Rohit Majumder</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tech-stack.html">Tech Stack</a></li>
+                <li><a href="games.html" class="active">Mini Games</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="mini-games">
+            <h2 class="animate-on-scroll">Mini Games & Utilities</h2>
+            <p class="section-intro animate-on-scroll">A collection of small, fun games and tools built with JavaScript.
+            </p>
+
+            <div class="games-grid">
+                <!-- Roll the Dice -->
+                <div class="game-card animate-on-scroll">
+                    <h3>Roll the Dice</h3>
+                    <div class="dice-container">
+                        <div class="dice" id="dice">
+                            <div class="face front"><img
+                                    src="https://tse2.mm.bing.net/th/id/OIP.6NZm7Gxk0lxB8m8B44RQ8QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                                    alt="1"></div>
+                            <div class="face back"><img src="https://clipartmag.com/images/dice-1-clipart-15.png"
+                                    alt="3"></div>
+                            <div class="face top"><img
+                                    src="https://game-icons.net/icons/000000/ffffff/1x1/skoll/inverted-dice-4.png"
+                                    alt="4"></div>
+                            <div class="face bottom"><img
+                                    src="https://th.bing.com/th/id/R.aa908b42e15c373f7e0a4385ad502f85?rik=NbUQ0SpzPhscAA&riu=http%3a%2f%2fclipartmag.com%2fimages%2fdice-1-6-1.png&ehk=i6fBCWFpXMOV5MC1vJZyQ1L3BR1OCoFQ2PuoArlDdTk%3d&risl=&pid=ImgRaw&r=0"
+                                    alt="6"></div>
+                            <div class="face right"><img
+                                    src="https://www.clipartkey.com/mpngs/m/113-1130254_file-dice-dice-5.png" alt="5">
+                            </div>
+                            <div class="face left"><img
+                                    src="https://www.clipartkey.com/mpngs/m/138-1380054_2-on-a-dice.png" alt="2"></div>
+                        </div>
+                    </div>
+                    <button id="roll-dice-btn" class="game-btn">Roll Dice</button>
+                </div>
+
+                <!-- Flip the Coin -->
+                <div class="game-card animate-on-scroll">
+                    <h3>Flip a Coin</h3>
+                    <div class="coin-container">
+                        <div id="coin" class="coin">
+                            <div class="heads"></div>
+                            <div class="tails"></div>
+                        </div>
+                    </div>
+                    <p class="coin-result" id="coin-result-text"></p>
+                    <button id="flip-coin-btn" class="game-btn">Flip Coin</button>
+                </div>
+
+                <!-- Internet Speed Test -->
+                <div class="game-card animate-on-scroll">
+                    <h3>Internet Speed Test</h3>
+                    <p>Click the button to test your download speed.</p>
+                    <div class="speed-display" id="speed-display">0.00 Mbps</div>
+                    <button id="speed-test-btn" class="game-btn">Start Test</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rohit Majumder. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+</body>
+
+</html>

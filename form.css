@@ -1,0 +1,77 @@
+/*
+================================================
+|                                              |
+|      FEEDBACK FORM STYLES                    |
+|      File: form.css                          |
+|                                              |
+================================================
+*/
+
+#feedback-form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #3f3d56;
+    background-color: #22223b;
+    color: var(--text-light);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#feedback-form button {
+    width: 100%;
+    cursor: none;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#feedback-form button:disabled {
+    opacity: 0.6;
+    background: var(--secondary-color);
+    cursor: not-allowed;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    min-height: 1.5em;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.form-message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}

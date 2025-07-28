@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit | About</title>
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231a1a2e%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2265%22 font-family=%22Space Grotesk%22 font-weight=%22bold%22 fill=%22%236c63ff%22>R</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- Canvas for background animation -->
+    <canvas id="star-canvas"></canvas>
+
+    <!-- Custom mouse cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Header -->
+<!-- Inside about.html, projects.html, and tech-stack.html -->
+<header>
+    <nav>
+        <a href="index.html" class="logo">Rohit Majumder</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li> <!-- Make sure 'active' is on the correct page -->
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tech-stack.html">Tech Stack</a></li>
+            <!-- Add these two new lines -->
+            <li><a href="games.html">Mini Games</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- Main Content -->
+    <main>
+        <section id="about">
+            <div class="about-content">
+                <img src="/WhatsApp Image 2025-07-28 at 17.13.30_40e2c867.jpg" alt="A photo of Rohit"
+                    class="profile-pic animate-on-scroll">
+                <div class="about-text animate-on-scroll">
+                    <h2>About Me</h2>
+                    <p>
+                        I am a passionate Computer Science and Engineering student currently studying at "M.A.K.A.U.T".
+                        I have a strong foundation in data structures, algorithms, and web development. I love solving
+                        complex problems and building applications that can make a difference. I'm currently exploring
+                        the
+                        world of cloud computing and machine learning.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="animate-on-scroll">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card animate-on-scroll">C</div>
+                <div class="skill-card animate-on-scroll">Python</div>
+                <div class="skill-card animate-on-scroll">HTML5</div>
+                <div class="skill-card animate-on-scroll">CSS3</div>
+                <div class="skill-card animate-on-scroll">JavaScript</div>
+                <div class="skill-card animate-on-scroll">React</div>
+                <div class="skill-card animate-on-scroll">Node.js</div>
+                <div class="skill-card animate-on-scroll">SQL</div>
+                <div class="skill-card animate-on-scroll">Git & GitHub</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rohit Majumder. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+/*__main__*/
+
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #3f3d56;
+    --accent-color: #ff6584;
+    --background-dark: #1a1a2e;
+    --background-white: #ffffff;
+    --text-light: #f0f0f0;
+    --heading-font: 'Space Grotesk', sans-serif;
+    --body-font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.7;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: none; /* Hide default cursor */
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    padding: clamp(80px, 12vw, 120px) 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--background-white);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+/* --- Hero Section --- */
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: var(--background-white);
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: var(--heading-font);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.4);
+}
+
+/* --- About Section --- */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    text-align: left;
+}
+
+.profile-pic {
+    width: clamp(150px, 20vw, 250px);
+    height: clamp(150px, 20vw, 250px);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 40px rgba(108, 99, 255, 0.5);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* --- Skills Section --- */
+#skills {
+    background-color: #161625;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.skill-card {
+    background-color: #22223b;
+    padding: 25px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #3f3d56;
+}
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(108, 99, 255, 0.2);
+    background-color: var(--primary-color);
+    color: var(--background-white);
+}
+
+/* --- Projects Section --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background-color: #161625;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3f3d56;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(108, 99, 255, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card-content p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Contact Section --- */
+#contact {
+    background-color: #161625;
+}
+#contact > p {
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.social-links {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--text-light);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* --- Tech Stack Page --- */
+#tech-discussion .section-intro {
+    max-width: 800px;
+    margin: -20px auto 60px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.tech-card {
+    background-color: #161625;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #3f3d56;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(108, 99, 255, 0.15);
+}
+
+.tech-icon {
+    margin-bottom: 20px;
+}
+
+.tech-icon svg {
+    width: 48px;
+    height: 48px;
+    color: var(--primary-color);
+}
+
+.tech-card h3 {
+    font-size: 1.5rem;
+}
+
+.tech-card p {
+    opacity: 0.7;
+}
